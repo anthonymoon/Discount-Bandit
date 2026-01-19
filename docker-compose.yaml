@@ -9,9 +9,10 @@ volumes:
 
 services:
   discount-bandit:
-    image: cybrarist/discount-bandit:v4
-#    build:
-#      context: .
+    build:
+      context: .
+      platform: linux/amd64
+    image: discount-bandit:intel-x86
     ports:
       - 8080:80
     networks:
